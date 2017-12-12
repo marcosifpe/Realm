@@ -35,13 +35,10 @@ import softwarecorporativo.exemplo.ejb.servico.CompradorServico;
 public class CompradorTeste {
 
     private static EJBContainer container;
-    private static Logger logger;
     private CompradorServico compradorServico;
 
     @BeforeClass
     public static void setUpClass() {
-        logger = Logger.getGlobal();
-        logger.setLevel(Level.INFO);
         container = EJBContainer.createEJBContainer();
         DbUnitUtil.inserirDados();
     }
@@ -85,7 +82,7 @@ public class CompradorTeste {
         comprador.setPrimeiroNome("Jose");
         comprador.setUltimoNome("Silva");
         comprador.setSenha("!teStE123@");
-        
+
         Endereco endereco = comprador.criarEndereco();
         endereco.setBairro("Engenho do Meio");
         endereco.setCep("50.640-120");
@@ -99,7 +96,7 @@ public class CompradorTeste {
         cartaoCredito.setBandeira("MASTERCARD");
         cartaoCredito.setNumero("5462014816361274");
         cartaoCredito.setDataExpiracao(getData(15, Calendar.FEBRUARY, 2022));
-        
+
         compradorServico.persistir(comprador);
         assertNotNull(comprador.getId());
     }
