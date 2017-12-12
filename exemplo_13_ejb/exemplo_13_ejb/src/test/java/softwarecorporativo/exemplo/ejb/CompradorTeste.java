@@ -14,7 +14,6 @@ import javax.naming.NamingException;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import org.hamcrest.CoreMatchers;
-import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.startsWith;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -79,10 +78,12 @@ public class CompradorTeste {
             assertTrue(false);
         } catch (EJBException ex) {
             assertTrue(ex.getCause() instanceof ConstraintViolationException);
-            ConstraintViolationException causa =
-                    (ConstraintViolationException) ex.getCause();
-            for (ConstraintViolation erroValidacao: causa.getConstraintViolations()) {
-                assertThat(erroValidacao.getMessage(), CoreMatchers.anyOf(startsWith("Senha fraca"), startsWith("tamanho deve estar entre 6 e 20")));
+            ConstraintViolationException causa
+                    = (ConstraintViolationException) ex.getCause();
+            for (ConstraintViolation erroValidacao : causa.getConstraintViolations()) {
+                assertThat(erroValidacao.getMessage(),
+                        CoreMatchers.anyOf(startsWith("Senha fraca"),
+                                startsWith("tamanho deve estar entre 6 e 20")));
             }
         }
 
