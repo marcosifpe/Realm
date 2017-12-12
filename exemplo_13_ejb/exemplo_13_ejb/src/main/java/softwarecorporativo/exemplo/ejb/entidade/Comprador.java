@@ -61,6 +61,11 @@ public class Comprador extends Usuario implements Serializable {
         return cartaoCredito;
     }
 
+    public CartaoCredito criarCartaoCredito() {
+        setCartaoCredito(new CartaoCredito());
+        return this.getCartaoCredito();
+    }
+    
     public void setCartaoCredito(CartaoCredito cartaoCredito) {
         this.cartaoCredito = cartaoCredito;
         this.cartaoCredito.setDono(this);

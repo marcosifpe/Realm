@@ -84,7 +84,7 @@ public abstract class Usuario extends Entidade implements Serializable {
     protected Date dataCriacao;    
     
     @PrePersist
-    public void setDataCriacao() {
+    protected void setDataCriacao() {
         this.setDataCriacao(new Date());
     }
     
