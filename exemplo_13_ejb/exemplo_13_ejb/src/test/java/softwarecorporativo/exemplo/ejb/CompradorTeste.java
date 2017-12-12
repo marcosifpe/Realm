@@ -70,6 +70,15 @@ public class CompradorTeste {
     }
 
     @Test
+    public void atualizar() {
+        Comprador comprador = compradorServico.consultarPorId(new Long(2));
+        comprador.setSenha("!Nov@400"); //Senha válida
+        compradorServico.atualizar(comprador);
+        comprador = compradorServico.consultarPorId(new Long(2));
+        assertEquals("!Nov@400", comprador.getSenha());
+    }
+
+    @Test
     public void atualizarInvalido() {
         Comprador comprador = compradorServico.consultarPorId(new Long(2));
         comprador.setSenha("123"); //Senha inválida
@@ -86,7 +95,6 @@ public class CompradorTeste {
                                 startsWith("tamanho deve estar entre 6 e 20")));
             }
         }
-
     }
 
     @Test
