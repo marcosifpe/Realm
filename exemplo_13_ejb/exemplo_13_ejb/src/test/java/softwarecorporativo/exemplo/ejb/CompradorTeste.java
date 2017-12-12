@@ -6,6 +6,7 @@
 package softwarecorporativo.exemplo.ejb;
 
 import java.util.List;
+import javax.ejb.EJBException;
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.NamingException;
 import org.junit.After;
@@ -60,10 +61,23 @@ public class CompradorTeste {
     }
 
     @Test
+    public void atualizarInvalido() {
+        Comprador comprador = compradorServico.consultarPorId(new Long(2));
+        comprador.setSenha("123");
+        try {
+            compradorServico.atualizar(comprador);
+            assertTrue(false);
+        } catch (EJBException ex) {
+            assertNotNull(ex.getCause());
+        }
+
+    }
+
+    @Test
     public void getCompradorPorCPF() {
         assertNotNull(compradorServico.consultarPorCPF("808.257.284-10"));
     }
-    
+
     @Test
     public void getCompradoresPorCartao() {
         List<Comprador> compradores = compradorServico.consultarCompradores("VISA");
