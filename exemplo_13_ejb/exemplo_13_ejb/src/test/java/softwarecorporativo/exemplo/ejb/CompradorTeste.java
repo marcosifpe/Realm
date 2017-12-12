@@ -56,17 +56,17 @@ public class CompradorTeste {
 
     @Test
     public void getCompradorPorId() {
-        assertNotNull(compradorServico.get(new Long(2)));
+        assertNotNull(compradorServico.consultarPorId(new Long(2)));
     }
 
     @Test
     public void getCompradorPorCPF() {
-        assertNotNull(compradorServico.getEntidade(new String[]{"808.257.284-10"}));
+        assertNotNull(compradorServico.consultarPorCPF("808.257.284-10"));
     }
     
     @Test
     public void getCompradoresPorCartao() {
-        List<Comprador> compradores = compradorServico.getEntidades(new Object[] {"VISA"});
+        List<Comprador> compradores = compradorServico.consultarCompradores("VISA");
         assertEquals(compradores.size(), 2);
     }
 }
