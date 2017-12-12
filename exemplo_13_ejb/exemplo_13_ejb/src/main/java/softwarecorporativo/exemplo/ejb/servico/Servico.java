@@ -18,6 +18,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import softwarecorporativo.exemplo.ejb.entidade.Entidade;
 
 /**
@@ -42,9 +43,9 @@ public abstract class Servico<T extends Entidade> {
     public abstract T criar();
 
     @TransactionAttribute(SUPPORTS)
-    public abstract boolean existe(T entidade);
+    public abstract boolean existe(@NotNull T entidade);
 
-    public void persistir(T entidade) {
+    public void persistir(@Valid T entidade) {
         if (!existe(entidade)) {
             entityManager.persist(entidade);
         }
@@ -58,7 +59,7 @@ public abstract class Servico<T extends Entidade> {
     }
 
     @TransactionAttribute(SUPPORTS)
-    public T consultarPorId(Long id) {
+    public T consultarPorId(@NotNull Long id) {
         return entityManager.find(classe, id);
     }
 
