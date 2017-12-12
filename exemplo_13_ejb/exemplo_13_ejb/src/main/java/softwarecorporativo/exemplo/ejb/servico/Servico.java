@@ -17,6 +17,7 @@ import javax.ejb.TransactionManagement;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.validation.Valid;
 import softwarecorporativo.exemplo.ejb.entidade.Entidade;
 
 /**
@@ -49,7 +50,7 @@ public abstract class Servico<T extends Entidade> {
         }
     }
 
-    public void atualizar(T entidade) {
+    public void atualizar(@Valid T entidade) {
         if (existe(entidade)) {
             entityManager.merge(entidade);
             entityManager.flush();

@@ -6,9 +6,16 @@
 package softwarecorporativo.exemplo.ejb;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.ejb.EJBException;
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.NamingException;
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
+import org.hamcrest.CoreMatchers;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.CoreMatchers.startsWith;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -25,10 +32,13 @@ import softwarecorporativo.exemplo.ejb.servico.CompradorServico;
 public class CompradorTeste {
 
     private static EJBContainer container;
+    private static Logger logger;
     private CompradorServico compradorServico;
 
     @BeforeClass
     public static void setUpClass() {
+        logger = Logger.getGlobal();
+        logger.setLevel(Level.INFO);
         container = EJBContainer.createEJBContainer();
         DbUnitUtil.inserirDados();
     }
@@ -63,12 +73,17 @@ public class CompradorTeste {
     @Test
     public void atualizarInvalido() {
         Comprador comprador = compradorServico.consultarPorId(new Long(2));
-        comprador.setSenha("123");
+        comprador.setSenha("123"); //Senha inválida
         try {
             compradorServico.atualizar(comprador);
             assertTrue(false);
         } catch (EJBException ex) {
-            assertNotNull(ex.getCause());
+            assertTrue(ex.getCause() instanceof ConstraintViolationException);
+            ConstraintViolationException causa =
+                    (ConstraintViolationException) ex.getCause();
+            for (ConstraintViolation erroValidacao: causa.getConstraintViolations()) {
+                assertThat(erroValidacao.getMessage(), CoreMatchers.anyOf(startsWith("Senha fraca"), startsWith("tamanho deve estar entre 6 e 20")));
+            }
         }
 
     }
