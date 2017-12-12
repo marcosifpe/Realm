@@ -12,6 +12,8 @@ import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import static javax.ejb.TransactionAttributeType.SUPPORTS;
 import javax.persistence.TypedQuery;
+import javax.validation.executable.ExecutableType;
+import javax.validation.executable.ValidateOnExecution;
 import softwarecorporativo.exemplo.ejb.entidade.Comprador;
 
 /**
@@ -20,6 +22,7 @@ import softwarecorporativo.exemplo.ejb.entidade.Comprador;
  */
 @Stateless(name = "ejb/CompradorServico")
 @LocalBean
+@ValidateOnExecution(type = ExecutableType.ALL)
 public class CompradorServico extends Servico<Comprador> {
 
     @PostConstruct
