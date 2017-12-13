@@ -35,7 +35,7 @@ public abstract class Servico<T extends Entidade> {
     protected Class<T> classe;
 
     @TransactionAttribute(NOT_SUPPORTED)
-    protected void setClasse(Class<T> classe) {
+    protected void setClasse(@NotNull Class<T> classe) {
         this.classe = classe;
     }
 
