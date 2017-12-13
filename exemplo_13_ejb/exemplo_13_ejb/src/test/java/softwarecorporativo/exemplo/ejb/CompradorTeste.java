@@ -62,6 +62,16 @@ public class CompradorTeste {
         comprador.setCpf("740.707.044-00");
         assertTrue(compradorServico.existe(comprador));
     }
+    
+    @Test
+    public void consultarCompradorCPFInvalido() {
+        try {
+            compradorServico.consultarPorCPF("222.111.444-98");
+            assertTrue(false);
+        } catch (EJBException ex) {
+            assertTrue(ex.getCause() instanceof ConstraintViolationException);
+        }
+    }
 
     @Test
     public void getCompradorPorId() {
