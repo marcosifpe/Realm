@@ -62,7 +62,12 @@ public class CompradorTeste {
         comprador.setCpf("740.707.044-00");
         assertTrue(compradorServico.existe(comprador));
     }
-    
+
+    @Test
+    public void getCompradorPorCPF() {
+        assertNotNull(compradorServico.consultarPorCPF("808.257.284-10"));
+    }
+
     @Test
     public void consultarCompradorCPFInvalido() {
         try {
@@ -71,6 +76,12 @@ public class CompradorTeste {
         } catch (EJBException ex) {
             assertTrue(ex.getCause() instanceof ConstraintViolationException);
         }
+    }
+
+    @Test
+    public void getCompradoresPorCartao() {
+        List<Comprador> compradores = compradorServico.consultarCompradores("VISA");
+        assertEquals(compradores.size(), 2);
     }
 
     @Test
@@ -143,16 +154,5 @@ public class CompradorTeste {
                                 startsWith("tamanho deve estar entre 6 e 20")));
             }
         }
-    }
-
-    @Test
-    public void getCompradorPorCPF() {
-        assertNotNull(compradorServico.consultarPorCPF("808.257.284-10"));
-    }
-
-    @Test
-    public void getCompradoresPorCartao() {
-        List<Comprador> compradores = compradorServico.consultarCompradores("VISA");
-        assertEquals(compradores.size(), 2);
     }
 }
