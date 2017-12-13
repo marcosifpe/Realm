@@ -12,8 +12,11 @@ import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import static javax.ejb.TransactionAttributeType.SUPPORTS;
 import javax.persistence.TypedQuery;
+import javax.validation.constraints.NotNull;
 import javax.validation.executable.ExecutableType;
 import javax.validation.executable.ValidateOnExecution;
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.br.CPF;
 import softwarecorporativo.exemplo.ejb.entidade.Comprador;
 
 /**
@@ -36,7 +39,7 @@ public class CompradorServico extends Servico<Comprador> {
     }
 
     @Override
-    public boolean existe(Comprador entidade) {
+    public boolean existe(@NotNull Comprador entidade) {
         TypedQuery<Comprador> query
                 = entityManager.createNamedQuery(Comprador.COMPRADOR_POR_CPF, classe);
         query.setParameter(1, entidade.getCpf());
@@ -44,12 +47,12 @@ public class CompradorServico extends Servico<Comprador> {
     }
 
     @TransactionAttribute(SUPPORTS)
-    public List<Comprador> consultarCompradores(String nomeCartao) {
+    public List<Comprador> consultarCompradores(@NotBlank String nomeCartao) {
         return super.consultarEntidades(new Object[] {nomeCartao}, Comprador.COMPRADOR_POR_CARTAO);
     }
     
     @TransactionAttribute(SUPPORTS)
-    public Comprador consultarPorCPF(String cpf) {
+    public Comprador consultarPorCPF(@CPF String cpf) {
         return super.consultarEntidade(new Object[] {cpf}, Comprador.COMPRADOR_POR_CPF);
     }    
 }
