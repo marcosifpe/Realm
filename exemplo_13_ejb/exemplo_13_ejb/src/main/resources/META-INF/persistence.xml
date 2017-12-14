@@ -9,7 +9,8 @@
             <property name="javax.persistence.validation.group.pre-remove" value="javax.validation.groups.Default"/>
             <property name="eclipselink.jdbc.native-sql" value="true"/>
             <property name="eclipselink.target-database" value="MySQL"/>
-            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.logging.level" value="FINEST"/>
+            <property name="eclipselink.weaving" value="static"/>
         </properties>
     </persistence-unit>
 </persistence>
