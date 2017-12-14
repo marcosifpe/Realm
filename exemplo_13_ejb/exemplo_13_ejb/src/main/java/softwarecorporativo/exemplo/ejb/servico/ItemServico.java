@@ -6,6 +6,7 @@
 package softwarecorporativo.exemplo.ejb.servico;
 
 import java.util.List;
+import javax.annotation.PostConstruct;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.validation.executable.ExecutableType;
@@ -20,7 +21,11 @@ import softwarecorporativo.exemplo.ejb.entidade.Item;
 @LocalBean
 @ValidateOnExecution(type = ExecutableType.ALL)
 public class ItemServico extends Servico<Item> {
-
+    @PostConstruct
+    public void init() {
+        super.setClasse(Item.class);
+    }
+ 
     @Override
     public Item criar() {
         return new Item();

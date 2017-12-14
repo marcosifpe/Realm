@@ -84,6 +84,10 @@ public class Item extends Entidade implements Serializable {
         this.vendedor = vendedor;
     }
 
+    public Oferta criarOferta() {
+        return new Oferta();
+    }
+    
     public List<Oferta> getOfertas() {
         return ofertas;
     }

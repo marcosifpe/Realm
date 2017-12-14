@@ -17,7 +17,7 @@ import org.junit.BeforeClass;
 public class Teste {
 
     protected static EJBContainer container;
-    protected static Logger logger = Logger.getGlobal();
+    protected final Logger logger = Logger.getGlobal();
 
     @BeforeClass
     public static void setUpClass() {
