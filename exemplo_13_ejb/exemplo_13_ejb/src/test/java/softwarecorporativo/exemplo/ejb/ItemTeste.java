@@ -28,7 +28,7 @@ import softwarecorporativo.exemplo.ejb.servico.ItemServico;
 public class ItemTeste extends Teste {
 
     private ItemServico itemServico;
-        private CompradorServico compradorServico;
+    private CompradorServico compradorServico;
 
     @Before
     public void setUp() throws NamingException {
@@ -62,6 +62,13 @@ public class ItemTeste extends Teste {
         assertFalse(item.adicionar(oferta)); //Oferta menor que valor mínimo
         oferta.setValor(BigDecimal.valueOf(750.00));
         assertTrue(item.adicionar(oferta)); //Oferta igual ao valor mínimo
+        comprador = compradorServico.consultarPorId(new Long(1));
+        oferta = item.criarOferta();
+        oferta.setComprador(comprador);
+        oferta.setValor(BigDecimal.valueOf(745.00));
+        assertFalse(item.adicionar(oferta)); //Oferta menor que oferta maior oferta
+        oferta.setValor(BigDecimal.valueOf(770.00));
+        assertTrue(item.adicionar(oferta)); //Oferta maior que oferta atual)
     }
 
 }
