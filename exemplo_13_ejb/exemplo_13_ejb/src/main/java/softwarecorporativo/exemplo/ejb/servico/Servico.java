@@ -45,7 +45,7 @@ public abstract class Servico<T extends Entidade> {
 
     @TransactionAttribute(SUPPORTS)
     public boolean existe(@NotNull T entidade) {
-        return false;
+        return true;
     }
 
     public void persistir(@Valid T entidade) {
