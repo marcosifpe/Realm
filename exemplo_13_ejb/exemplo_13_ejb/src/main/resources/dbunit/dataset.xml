@@ -24,7 +24,7 @@
     <TB_USUARIO num_versao = "1" disc_usuario = "C" txt_cpf = "026.605.218-59" dt_nascimento = "1979-09-01" dt_criacao = "2015-01-10 12:06:12"
                 txt_email = "beltrano@gmail.com" end_txt_bairro = "Iputinga" end_txt_cep = "50.670-210" end_txt_cidade = "Recife"
                 end_txt_complemento = "Apto. 302" end_txt_estado = "PE" end_txt_logradouro = "Rua Ribeirão"
-                end_numero = "20" txt_login = "beltrano" txt_primeiro_nome = "Beltrano" txt_ultimo_nome = "Ferreira" txt_senha = "beltrano_mesmo"/>
+                end_numero = "20" txt_login = "beltrano" txt_primeiro_nome = "Beltrano" txt_ultimo_nome = "Ferreira" txt_senha = "teStE123@"/>
     <!-- CartaoCredito id = 3 -->
     <TB_CARTAO_CREDITO num_versao = "1" txt_bandeira = "VISA" dt_expiracao = "2016-06-17" txt_numero = "4084770193100046"/>
     <TB_COMPRADOR id_usuario = "3" id_cartao_credito = "3"/>
@@ -32,7 +32,7 @@
     <TB_USUARIO num_versao = "1" disc_usuario = "C" txt_cpf = "787.829.223-06" dt_nascimento = "1989-10-23" dt_criacao = "2015-01-12 13:36:53"
                 txt_email = "ze@gmail.com" end_txt_bairro = "Iputinga" end_txt_cep = "50.670-210" end_txt_cidade = "Recife"
                 end_txt_complemento = "Apto. 401" end_txt_estado = "PE" end_txt_logradouro = "Rua Ribeirão"
-                end_numero = "20" txt_login = "zesilva" txt_primeiro_nome = "Jose" txt_ultimo_nome = "Silva" txt_senha = "ze123"/>
+                end_numero = "20" txt_login = "zesilva" txt_primeiro_nome = "Jose" txt_ultimo_nome = "Silva" txt_senha = "teStE123@"/>
     <!-- CartaoCredito id = 4 -->
     <TB_CARTAO_CREDITO num_versao = "1" txt_bandeira = "MAESTRO" dt_expiracao = "2015-01-17" txt_numero = "6759744303415452"/>
     <TB_COMPRADOR id_usuario = "4" id_cartao_credito = "4"/>
@@ -40,33 +40,33 @@
     <TB_USUARIO num_versao = "1" disc_usuario = "V" txt_cpf = "484.854.847-03" dt_nascimento = "1995-11-23" dt_criacao = "2015-01-12 14:30:00"
                 txt_email = "vendedor1@gmail.com" end_txt_bairro = "Iputinga" end_txt_cep = "50.670-210" end_txt_cidade = "Recife"
                 end_txt_complemento = "Apto. 704" end_txt_estado = "PE" end_txt_logradouro = "Rua Ribeirão"
-                end_numero = "20" txt_login = "v1silva" txt_primeiro_nome = "Vendedor" txt_ultimo_nome = "Silva" txt_senha = "v1123"/>
+                end_numero = "20" txt_login = "v1silva" txt_primeiro_nome = "Vendedor" txt_ultimo_nome = "Silva" txt_senha = "teStE123@"/>
     <TB_VENDEDOR id_usuario = "5" num_valor_vendas = "10500.50" txt_reputacao = "EXPERIENTE" />
     <!-- Usuario id = 6 (vendedor) -->
     <TB_USUARIO num_versao = "1" disc_usuario = "V" txt_cpf = "316.819.699-12" dt_nascimento = "1985-11-23" dt_criacao = "2015-02-12 14:30:00"
                 txt_email = "vendedor2@gmail.com" end_txt_bairro = "Iputinga" end_txt_cep = "50.670-210" end_txt_cidade = "Recife"
                 end_txt_complemento = "Apto. 902" end_txt_estado = "PE" end_txt_logradouro = "Rua Ribeirão"
-                end_numero = "20" txt_login = "v2silva" txt_primeiro_nome = "Vendedor" txt_ultimo_nome = "Costa" txt_senha = "segs123"/>
+                end_numero = "20" txt_login = "v2silva" txt_primeiro_nome = "Vendedor" txt_ultimo_nome = "Costa" txt_senha = "teStE123@"/>
     <TB_VENDEDOR id_usuario = "6" num_valor_vendas = "5500.99" txt_reputacao = "EXPERIENTE" />    
     <!-- Usuario id = 7 (vendedor) -->
     <TB_USUARIO num_versao = "1" disc_usuario = "V" txt_cpf = "548.578.464-03" dt_nascimento = "1995-11-23" dt_criacao = "2015-02-12 14:30:00"
                 txt_email = "vendedor3@gmail.com" end_txt_bairro = "Iputinga" end_txt_cep = "50.670-210" end_txt_cidade = "Recife"
                 end_txt_complemento = "Apto. 702" end_txt_estado = "PE" end_txt_logradouro = "Rua Ribeirão"
-                end_numero = "20" txt_login = "v3silva" txt_primeiro_nome = "Vendedor" txt_ultimo_nome = "Bezerra" txt_senha = "segredos123"/>
+                end_numero = "20" txt_login = "v3silva" txt_primeiro_nome = "Vendedor" txt_ultimo_nome = "Bezerra" txt_senha = "teStE123@"/>
     <TB_VENDEDOR id_usuario = "7" num_valor_vendas = "100.00" txt_reputacao = "NOVATO" />
     <!-- Usuario id = 8 (comprador) -->    
     <TB_USUARIO num_versao = "1" disc_usuario = "C" txt_cpf = "772.633.604-89" dt_nascimento = "1987-10-21" dt_criacao = "2015-02-12 16:16:50" 
                 txt_email = "comp@gmail.com" end_txt_bairro = "Iputinga" end_txt_cep = "50.670-210" end_txt_cidade = "Recife"
                 end_txt_complemento = "Apto. 101" end_txt_estado = "PE" end_txt_logradouro = "Rua Ribeirão"
-                end_numero = "20" txt_login = "comp1" txt_primeiro_nome = "Comprador" txt_ultimo_nome = "Costa" txt_senha = "comp"/>
+                end_numero = "20" txt_login = "comp1" txt_primeiro_nome = "Comprador" txt_ultimo_nome = "Costa" txt_senha = "teStE123@"/>
     <!-- CartaoCredito id = 4 -->
     <TB_COMPRADOR id_usuario = "8" />        
     <!-- Item id = 1 -->
-    <TB_ITEM num_versao = "1" txt_titulo = "boss DD-7" txt_descricao = "Delay digital boss (top de linha)" id_vendedor = "5" />
+    <TB_ITEM num_versao = "1" txt_titulo = "boss DD-7" txt_descricao = "Delay digital boss (top de linha)" id_vendedor = "5" num_valor_minimo = "150.00" />
     <TB_ITENS_CATEGORIAS id_item = "1" id_categoria = "1" />
     <TB_ITENS_CATEGORIAS id_item = "1" id_categoria = "3" />
     <!-- Item id = 2 -->
-    <TB_ITEM num_versao = "1" txt_titulo = "boss DM-2 waza" txt_descricao = "Delay analógico Boss (reedição)" id_vendedor = "5" />
+    <TB_ITEM num_versao = "1" txt_titulo = "boss DM-2 waza" txt_descricao = "Delay analógico Boss (reedição)" id_vendedor = "5" num_valor_minimo = "450.00" />
     <TB_ITENS_CATEGORIAS id_item = "2" id_categoria = "1" />
     <TB_ITENS_CATEGORIAS id_item = "2" id_categoria = "3" />    
     <!-- Item id = 3 -->
@@ -80,7 +80,11 @@
     <!-- Item id = 5 -->
     <TB_ITEM num_versao = "1" txt_titulo = "Flauta Doce" txt_descricao = "Flauta Doce Nova" id_vendedor = "7" />
     <TB_ITENS_CATEGORIAS id_item = "5" id_categoria = "1" />
-    <TB_ITENS_CATEGORIAS id_item = "5" id_categoria = "4" />     
+    <TB_ITENS_CATEGORIAS id_item = "5" id_categoria = "4" /> 
+    <!-- Item id = 6 -->        
+    <TB_ITEM num_versao = "1" txt_titulo = "boss DM-2" txt_descricao = "Delay analógico Boss anos 80" id_vendedor = "5" num_valor_minimo = "750.00" />
+    <TB_ITENS_CATEGORIAS id_item = "6" id_categoria = "1" />
+    <TB_ITENS_CATEGORIAS id_item = "6" id_categoria = "3" />       
     <!-- Oferta id = 1 -->
     <TB_OFERTA num_versao = "1" id_item = "1" num_valor = "500.00" dt_oferta = "2015-01-12 12:00:30" id_comprador = "1" flag_vencedora = "0" />
     <!-- Oferta id = 2 -->

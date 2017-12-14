@@ -9,16 +9,13 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import javax.ejb.EJBException;
-import javax.ejb.embeddable.EJBContainer;
 import javax.naming.NamingException;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import org.hamcrest.CoreMatchers;
 import static org.hamcrest.CoreMatchers.startsWith;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import softwarecorporativo.exemplo.ejb.entidade.CartaoCredito;
@@ -30,22 +27,9 @@ import softwarecorporativo.exemplo.ejb.servico.CompradorServico;
  *
  * @author marcos
  */
-public class CompradorTeste {
+public class CompradorTeste extends Teste {
 
-    private static EJBContainer container;
     private CompradorServico compradorServico;
-
-    @BeforeClass
-    public static void setUpClass() {
-        container = EJBContainer.createEJBContainer();
-        DbUnitUtil.inserirDados();
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-        container.close();
-    }
-
     @Before
     public void setUp() throws NamingException {
         compradorServico = (CompradorServico) container.getContext().lookup("java:global/classes/ejb/CompradorServico!softwarecorporativo.exemplo.ejb.servico.CompradorServico");

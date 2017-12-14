@@ -17,7 +17,7 @@ import org.junit.runners.Suite;
  * @author marcos
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({softwarecorporativo.exemplo.ejb.CompradorTeste.class})
+@Suite.SuiteClasses({CompradorTeste.class, ItemTeste.class})
 public class TestSuite {
 
     @BeforeClass

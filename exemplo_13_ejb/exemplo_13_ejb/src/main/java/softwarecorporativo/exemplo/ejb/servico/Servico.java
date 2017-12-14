@@ -12,6 +12,7 @@ import static javax.ejb.TransactionManagementType.CONTAINER;
 import static javax.persistence.PersistenceContextType.TRANSACTION;
 
 import java.util.List;
+import java.util.logging.Logger;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionManagement;
 import javax.persistence.EntityManager;
@@ -43,7 +44,9 @@ public abstract class Servico<T extends Entidade> {
     public abstract T criar();
 
     @TransactionAttribute(SUPPORTS)
-    public abstract boolean existe(@NotNull T entidade);
+    public boolean existe(@NotNull T entidade) {
+        return false;
+    }
 
     public void persistir(@Valid T entidade) {
         if (!existe(entidade)) {

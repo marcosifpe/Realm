@@ -57,7 +57,7 @@ public class Vendedor extends Usuario implements Serializable {
     }
 
     public boolean remover(Item item) {
-        if (!item.temOfertas())
+        if (!item.possuiOfertas())
             return itens.remove(item);
         else
             return false;
