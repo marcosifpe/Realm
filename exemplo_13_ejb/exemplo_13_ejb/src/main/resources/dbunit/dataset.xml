@@ -18,7 +18,7 @@
                 end_txt_complemento = "Apto. 202" end_txt_estado = "PE" end_txt_logradouro = "Rua Ribeirão"
                 end_numero = "20" txt_login = "sicrano" txt_primeiro_nome = "Sicrano" txt_ultimo_nome = "Costa" txt_senha = "sic?ranO123"/>
     <!-- CartaoCredito id = 2  -->
-    <TB_CARTAO_CREDITO num_versao = "1" txt_bandeira = "MASTERCARD" dt_expiracao = "2018-04-11" txt_numero = "5555666677778884"/>
+    <TB_CARTAO_CREDITO num_versao = "1" txt_bandeira = "MASTERCARD" dt_expiracao = "2020-04-11" txt_numero = "5555666677778884"/>
     <TB_COMPRADOR id_usuario = "2" id_cartao_credito = "2"/>
     <!-- Usuario id = 3 (comprador) -->
     <TB_USUARIO num_versao = "1" disc_usuario = "C" txt_cpf = "026.605.218-59" dt_nascimento = "1979-09-01" dt_criacao = "2015-01-10 12:06:12"
