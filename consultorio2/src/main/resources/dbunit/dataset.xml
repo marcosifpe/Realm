@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>  
+    <!-- Usuario id = 1 (paciente) -->
+    <TB_USUARIO ID_USUARIO="1" DISC_USUARIO = "P" CL_NOME="Maria Joaquina" CL_EMAIL = "mariajoaquina@gmail.com" 
+                CL_LOGIN= "mariajoaquina" CL_SENHA = "Maria123" CL_SEXO="F">
+    </TB_USUARIO>
+    <TB_PACIENTE ID_PACIENTE="1" CL_PLANO="UNIMED"></TB_PACIENTE>
+
+    <!-- Usuario id = 2 (paciente) -->
+    <TB_USUARIO ID_USUARIO="2" DISC_USUARIO = "P" CL_NOME="Joao Augusto" CL_EMAIL = "Joaoaugusto@gmail.com" 
+                CL_LOGIN = "joaoaugusto" CL_SENHA = "joao123" CL_SEXO="M">
+    </TB_USUARIO>
+    <TB_PACIENTE ID_PACIENTE="2" CL_PLANO="HAPVIDA"></TB_PACIENTE>
+   
+    <!-- Usuario id = 3 (paciente) -->
+    <TB_USUARIO ID_USUARIO="3" DISC_USUARIO = "P" CL_NOME="Luiz Miguel" CL_EMAIL = "luizmiguel@gmail.com" 
+                CL_LOGIN = "luizmiguel" CL_SENHA = "luiz123" CL_SEXO="M">
+    </TB_USUARIO>
+    <TB_PACIENTE ID_PACIENTE="3" CL_PLANO="SULAMERICA"></TB_PACIENTE>
+
+    <!-- Usuario id = 4 (paciente) -->
+    <TB_USUARIO ID_USUARIO="4" DISC_USUARIO = "P" CL_NOME="Catarina Luiza" CL_EMAIL = "catarinaluiza@gmail.com" 
+                 CL_LOGIN = "catarinaluiza" CL_SENHA = "catarina123" CL_SEXO="F">
+    </TB_USUARIO>
+    <TB_PACIENTE ID_PACIENTE="4" CL_PLANO="UNIMED"></TB_PACIENTE>  
+
+    <!-- Usuario id = 5 (funcionario) -->
+    <TB_USUARIO ID_USUARIO="5" DISC_USUARIO = "F" CL_NOME="Joao Rafael" CL_EMAIL = "Joaorafael@gmail.com" 
+                CL_LOGIN= "joaorafael" CL_SENHA = "joaor123" CL_SEXO="M">
+    </TB_USUARIO>
+    <TB_FUNCIONARIO ID_FUNCIONARIO="5" CL_TIPO_FUNCIONARIO="MEDICO" CL_ESCOLARIDADE="ENSINO SUPERIOR COMPLETO" CL_ESPECIALIDADE="CARDIOLOGISTA"></TB_FUNCIONARIO>
+
+    <!-- Usuario id = 6 (funcionario) -->
+    <TB_USUARIO ID_USUARIO="6" DISC_USUARIO = "F" CL_NOME="Ana Clara" CL_EMAIL = "anaclara@gmail.com" 
+                CL_LOGIN= "anaclara" CL_SENHA = "anaclara123" CL_SEXO="F">
+    </TB_USUARIO>
+    <TB_FUNCIONARIO ID_FUNCIONARIO="6" CL_TIPO_FUNCIONARIO="SECRETARIA" CL_ESCOLARIDADE="ENSINO SUPERIOR COMPLETO" CL_ESPECIALIDADE="TECNICO EM SECRETARIADO"></TB_FUNCIONARIO>   
+
+    <!-- Usuario id = 7 (funcionario) -->
+    <TB_USUARIO ID_USUARIO="7" DISC_USUARIO = "F" CL_NOME="Jose Luiz" CL_EMAIL = "Joseluiz@gmail.com" 
+                CL_LOGIN = "joseluiz" CL_SENHA = "joseluiz123" CL_SEXO="M">
+    </TB_USUARIO>
+    <TB_FUNCIONARIO ID_FUNCIONARIO="7" CL_TIPO_FUNCIONARIO="ATENDENTE" CL_ESCOLARIDADE="ENSINO MEDIO COMPLETO" CL_ESPECIALIDADE="TECNICO EM ADMINISTRAÇÃO"></TB_FUNCIONARIO>
+   
+    <!-- Usuario id = 8 (paciente) -->  
+    <TB_USUARIO ID_USUARIO="8" DISC_USUARIO = "P" CL_NOME="Maria Juliana" CL_EMAIL = "mariajuliana@gmail.com" 
+                CL_LOGIN = "mariajuliana" CL_SENHA = "mariaj123" CL_SEXO="F">
+    </TB_USUARIO>
+    <TB_PACIENTE ID_PACIENTE="8" CL_PLANO="HAPVIDA"></TB_PACIENTE> 
+   
+    <!-- Usuario id = 9 (funcionario) -->
+    <TB_USUARIO ID_USUARIO="9" DISC_USUARIO = "F" CL_NOME="Julia Gomes" CL_EMAIL = "Juliagomes@gmail.com" 
+                CL_LOGIN= "juliagomes" CL_SENHA = "julia123" CL_SEXO="F">
+    </TB_USUARIO>
+    <TB_FUNCIONARIO ID_FUNCIONARIO="9" CL_TIPO_FUNCIONARIO="MEDICO" CL_ESCOLARIDADE="ENSINO SUPERIOR COMPLETO" CL_ESPECIALIDADE="HOTORRINOLARINGOLOGISTA"></TB_FUNCIONARIO>
+    
+    <!-- Usuario id = 10 (funcionario) -->
+    <TB_USUARIO ID_USUARIO="10" DISC_USUARIO = "F" CL_NOME="Giana Lucia" CL_EMAIL = "gianalucia@gmail.com"
+                CL_LOGIN= "gianalucia" CL_SENHA = "giana123" CL_SEXO="F">
+    </TB_USUARIO>
+    <TB_FUNCIONARIO ID_FUNCIONARIO="10" CL_TIPO_FUNCIONARIO="MEDICO" CL_ESCOLARIDADE="ENSINO SUPERIOR COMPLETO" CL_ESPECIALIDADE="DERMATOLOGISTA"></TB_FUNCIONARIO>
+     
+    <!-- Marcar Consulta id = 1 -->      
+    <TB_MARCAR_CONSULTA ID_CONSULTA="1" CL_DATA_CONS="2018-09-25" CL_HORA="14:30H" ID_PACIENTE="2"></TB_MARCAR_CONSULTA> 
+    
+    <!-- Marcar Consulta id = 2 -->      
+    <TB_MARCAR_CONSULTA  ID_CONSULTA="2" CL_DATA_CONS="2018-09-28" CL_HORA="14:45H" ID_PACIENTE="3"></TB_MARCAR_CONSULTA>    
+    
+    <!-- Marcar Consulta id = 2 -->      
+    <TB_MARCAR_CONSULTA  ID_CONSULTA="3" CL_DATA_CONS="2018-09-25" CL_HORA="15:15H" ID_PACIENTE="3"></TB_MARCAR_CONSULTA>    
+    
+    <!-- tb_consulta_medicos id = 1-->      
+    <TB_CONSULTA_MEDICOS  ID_CONSULTA="1" ID_FUNCIONARIO="5"></TB_CONSULTA_MEDICOS > 
+      
+    <!-- tb_consulta_medicos id = 2-->      
+    <TB_CONSULTA_MEDICOS  ID_CONSULTA="2" ID_FUNCIONARIO="9"></TB_CONSULTA_MEDICOS > 
+    
+     <!-- tb_consulta_medicos id = 3-->      
+    <TB_CONSULTA_MEDICOS  ID_CONSULTA="3" ID_FUNCIONARIO="5"></TB_CONSULTA_MEDICOS >   
+      
+    <!-- Remedio id = 1 -->  
+    <TB_REMEDIO ID_REMEDIO="1" CL_NOME_REMEDIO="Atensina" CL_TRATAMENTO="Pressão alta" CL_DURACAO="3 meses"></TB_REMEDIO>
+    
+    <!-- Remedio id = 2 -->  
+    <TB_REMEDIO ID_REMEDIO="2" CL_NOME_REMEDIO="Atenolol" CL_TRATAMENTO="Pressão alta" CL_DURACAO="2 meses"></TB_REMEDIO>
+    
+    <!-- Remedio id = 3 -->  
+    <TB_REMEDIO ID_REMEDIO="3" CL_NOME_REMEDIO="Aerolim" CL_TRATAMENTO="Expectorante" CL_DURACAO="15 dias"></TB_REMEDIO>
+    
+    <!-- Remedio id = 4 -->  
+    <TB_REMEDIO ID_REMEDIO="4" CL_NOME_REMEDIO="Cetoconazol" CL_TRATAMENTO="Antifungico" CL_DURACAO="20 dias"></TB_REMEDIO>
+    
+    <!-- Remedio id = 5 -->  
+    <TB_REMEDIO ID_REMEDIO="5" CL_NOME_REMEDIO="Pomada Bepantol" CL_TRATAMENTO="Queimadura" CL_DURACAO="7 dias"></TB_REMEDIO>
+    
+    <!-- Receita id = 1 -->  
+    <TB_RECEITA ID_RECEITA="1" CL_DATA_RECEITA = "2018-09-25" ID_REMEDIO="1" ID_FUNCIONARIO="5" ID_PACIENTE="2" ></TB_RECEITA>
+    
+    <!-- Receita id = 2 -->  
+    <TB_RECEITA ID_RECEITA="2" CL_DATA_RECEITA = "2018-09-25" ID_REMEDIO="1" ID_FUNCIONARIO="5" ID_PACIENTE="3"></TB_RECEITA>
+    
+    <!-- Receita id = 3 -->  
+    <TB_RECEITA ID_RECEITA="3" CL_DATA_RECEITA = "2018-09-28" ID_REMEDIO="3" ID_FUNCIONARIO="9" ID_PACIENTE="3"></TB_RECEITA>
+    
+    <!-- Receita id = 4 -->  
+    <TB_RECEITA ID_RECEITA="4" CL_DATA_RECEITA = "2018-09-28" ID_REMEDIO="5" ID_FUNCIONARIO="10" ID_PACIENTE="8"></TB_RECEITA>
+
+    <!-- Receita id = 5 -->  
+    <TB_RECEITA ID_RECEITA="5" CL_DATA_RECEITA = "2018-09-28" ID_REMEDIO="4" ID_FUNCIONARIO="10" ID_PACIENTE="8"></TB_RECEITA>
+    
+    <!-- Exame id = 1 -->  
+    <TB_EXAME ID_EXAME="1" CL_NOME_EXAME="Ultrasom do torax"></TB_EXAME>
+    
+    <!-- Exame id = 2 -->  
+    <TB_EXAME ID_EXAME="2" CL_NOME_EXAME="Raio X da face"></TB_EXAME>
+    
+    <!-- Exame id = 3 -->  
+    <TB_EXAME ID_EXAME="3" CL_NOME_EXAME="Tomografia da face"></TB_EXAME>
+    
+    <!-- Exame id = 4 -->  
+    <TB_EXAME ID_EXAME="4" CL_NOME_EXAME="Hemograma completo"></TB_EXAME>
+      
+    <!-- Exame id = 5 -->  
+    <TB_EXAME ID_EXAME="5" CL_NOME_EXAME="Esteira"></TB_EXAME>  
+    
+    <!-- Solicitar exame id = 1 -->  
+    <TB_SOLICITAR_EXAME ID_SOLICITAR_EXAME="1" CL_DATA_EXAME="2018-09-28" ID_EXAME="5" ID_FUNCIONARIO="5" ID_PACIENTE="2"></TB_SOLICITAR_EXAME>  
+    
+    <!-- Solicitar exame id = 2 -->  
+    <TB_SOLICITAR_EXAME ID_SOLICITAR_EXAME="2" CL_DATA_EXAME="2018-09-25" ID_EXAME="3" ID_FUNCIONARIO="9" ID_PACIENTE="3"></TB_SOLICITAR_EXAME>  
+    
+    <!-- Solicitar exame id = 3 -->  
+    <TB_SOLICITAR_EXAME ID_SOLICITAR_EXAME="3" CL_DATA_EXAME="2018-09-28" ID_EXAME="2" ID_FUNCIONARIO="10" ID_PACIENTE="8"></TB_SOLICITAR_EXAME>
+                 
+</dataset>
