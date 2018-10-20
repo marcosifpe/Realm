@@ -51,6 +51,7 @@ public class TesteValidacao extends TesteBase {
     //Teste apenas para verificar funcionamento do Bean Validation
     //Fazer como no exemplo12
     //Verificar os demais testes pois estão estourando erros de validação
+    @Test(expected = ConstraintViolationException.class)
     public void criarPacienteInvalido() {
         Paciente p = new Paciente();
         p.setNome("CAROLINA");/* nome invalido*/
