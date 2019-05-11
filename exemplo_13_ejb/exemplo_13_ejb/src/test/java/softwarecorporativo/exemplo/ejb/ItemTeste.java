@@ -6,11 +6,7 @@
 package softwarecorporativo.exemplo.ejb;
 
 import java.math.BigDecimal;
-import java.util.Date;
-import java.util.logging.Level;
-import javax.ejb.EJBException;
 import javax.naming.NamingException;
-import javax.validation.ConstraintViolationException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
