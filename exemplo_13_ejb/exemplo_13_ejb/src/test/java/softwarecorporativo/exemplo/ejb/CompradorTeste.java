@@ -49,7 +49,9 @@ public class CompradorTeste extends Teste {
 
     @Test
     public void getCompradorPorCPF() {
-        assertNotNull(compradorServico.consultarPorCPF("808.257.284-10"));
+        Comprador comprador = compradorServico.consultarPorCPF("808.257.284-10");
+        assertNotNull(comprador);
+        assertEquals("Fulano", comprador.getPrimeiroNome());
     }
 
     @Test(expected = EJBException.class)
