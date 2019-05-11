@@ -14,7 +14,6 @@ import javax.ejb.TransactionAttributeType;
 import javax.validation.executable.ExecutableType;
 import javax.validation.executable.ValidateOnExecution;
 import softwarecorporativo.exemplo.ejb.entidade.Item;
-import softwarecorporativo.exemplo.ejb.entidade.Oferta;
 
 /**
  *
