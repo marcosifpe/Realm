@@ -12,7 +12,6 @@ import static javax.ejb.TransactionManagementType.CONTAINER;
 import static javax.persistence.PersistenceContextType.TRANSACTION;
 
 import java.util.List;
-import java.util.logging.Logger;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionManagement;
 import javax.persistence.EntityManager;
