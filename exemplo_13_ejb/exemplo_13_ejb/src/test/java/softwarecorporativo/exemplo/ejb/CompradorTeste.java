@@ -52,13 +52,13 @@ public class CompradorTeste extends Teste {
         assertNotNull(compradorServico.consultarPorCPF("808.257.284-10"));
     }
 
-    @Test
+    @Test(expected = EJBException.class)
     public void consultarCompradorCPFInvalido() {
         try {
             compradorServico.consultarPorCPF("222.111.444-98");
-            assertTrue(false);
         } catch (EJBException ex) {
             assertTrue(ex.getCause() instanceof ConstraintViolationException);
+            throw ex;
         }
     }
 
@@ -121,13 +121,12 @@ public class CompradorTeste extends Teste {
         assertEquals("!Nov@400", comprador.getSenha());
     }
 
-    @Test
+    @Test(expected = EJBException.class)
     public void atualizarInvalido() {
         Comprador comprador = compradorServico.consultarPorId(new Long(2));
         comprador.setSenha("123"); //Senha inválida
         try {
             compradorServico.atualizar(comprador);
-            assertTrue(false);
         } catch (EJBException ex) {
             assertTrue(ex.getCause() instanceof ConstraintViolationException);
             ConstraintViolationException causa
@@ -137,6 +136,8 @@ public class CompradorTeste extends Teste {
                         CoreMatchers.anyOf(startsWith("Senha fraca"),
                                 startsWith("tamanho deve estar entre 6 e 20")));
             }
+            
+            throw ex;
         }
     }
 }
